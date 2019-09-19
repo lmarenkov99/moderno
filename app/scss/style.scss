@@ -72,11 +72,12 @@
     font-size: 48px;
     line-height: 72px;
     font-weight: 700;
+    color: #fff;
   }
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
   &-form {
@@ -91,12 +92,12 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
     button {
@@ -120,7 +121,7 @@
   text-align: center;
   margin-bottom: 60px;
   button {
-    font-weight: 500;
+    @include f500;
     padding: 12px 21px;
     background-color: #fff;
     border: none;
@@ -129,9 +130,9 @@
     & + button {
       margin-left: 5px;
     }
-    &.mixitup-control-active{
-        background-color: $red;
-        color: #fff;
+    &.mixitup-control-active {
+      background-color: $red;
+      color: #fff;
     }
   }
 }
@@ -158,7 +159,7 @@
     align-items: center;
     padding: 10px 30px;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -177,7 +178,7 @@
   &-price {
     font-size: 20px;
     color: $bg;
-    font-weight: 700;
+    @include f700;
   }
   &-info {
     display: flex;
@@ -202,14 +203,14 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
   }
-  &-star{
-      font-size: 12px;
-      span{
-          color: $bg;
-      }
+  &-star {
+    font-size: 12px;
+    span {
+      color: $bg;
+    }
   }
 }
 .products__bottom-btn {
@@ -222,9 +223,9 @@
     color: $bg;
     padding: 20px 30px;
     cursor: pointer;
-    &.mixitup-control-active{
-        background-color: $red;
-        color: #fff;
+    &.mixitup-control-active {
+      background-color: $red;
+      color: #fff;
     }
   }
 }
@@ -232,31 +233,101 @@
 
 // start product slider
 
-.product-slider{
-    padding: 110px 0px 120px;
+.product-slider {
+  padding: 110px 0px 120px;
 }
-.slick-dots{
-    text-align: center;
-    margin-top: 50px;
-    li{
-        display: inline-block;
-        margin-left: 3px;
-        margin-right: 3px;
-        &.slick-active{
-            button{
-                background-color: $green;
-            }
-        }
-        button{
-            border-radius: 50%;
-            background-color: rgb(232,232,232);
-            border: none;
-            font-size: 0;
-            width: 16px;
-            height: 16px;
-            cursor: pointer;
-            outline: none;
-        }
+.slick-dots {
+  text-align: center;
+  margin-top: 50px;
+  li {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    &.slick-active {
+      button {
+        background-color: $green;
+      }
     }
+    button {
+      border-radius: 50%;
+      background-color: rgb(232, 232, 232);
+      border: none;
+      font-size: 0;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
 }
 // end product slider
+
+// start adventages
+
+.adventages {
+  background-color: $bg;
+  padding: 110px 0;
+  &__title {
+    color: #fff;
+  }
+}
+.adventages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.adventages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0px 15px;
+  &:hover {
+    .adventages__item-images {
+      background-color: $green;
+    }
+    .adventages__item-title {
+      color: $green;
+    }
+    .adventages__item-images {
+      path {
+        fill: #fff;
+        transition: all 0.6s;
+      }
+    }
+  }
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all 0.4s;
+  }
+  &-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px;
+    @include f500;
+    transition: all 0.3s;
+  }
+  &-text {
+    font-size: 15px;
+  }
+}
+.icosvg-1 {
+  svg {
+    width: 50px;
+  }
+}
+.icosvg-2 {
+  svg {
+    width: 70px;
+  }
+}
+.icosvg-3 {
+  svg {
+    width: 86px;
+  }
+}
+// end adventages
